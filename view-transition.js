@@ -1,4 +1,4 @@
-import { Component} from 'react'
+import { Component, StrictMode } from 'react'
 
 export default class ViewTransition extends Component {
   shouldComponentUpdate () {
@@ -17,7 +17,7 @@ export default class ViewTransition extends Component {
   }
 
   render () {
-    return this.props.children
+    return <StrictMode>{this.props.children}</StrictMode>
   }
 
   #rendered = () => {}
