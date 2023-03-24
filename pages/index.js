@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import photos from '@/photos'
-import Photo from '@/components/photo'
-import Footer from '@/components/footer'
+import Photo from '@/components/Photo'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <header></header>
       <main aria-label="Content">
         <ol aria-label="Photographs">
-          {photos.map((photo, index) => (<Photo {...photo} index={index}/>))}
+          {photos.map((photo, index) => (<Photo {...photo} index={index} key={photo.slug}/>))}
         </ol>
       </main>
       <Footer/>
