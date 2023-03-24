@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import photos from '@/photos'
+import Footer from '@/components/Footer'
 
 export default function Photo ({ index, title, flickr_url, image, alt, location, date, camera, film }) {
   const style = { viewTransitionName: `photo-${index}` }
@@ -36,6 +37,7 @@ export default function Photo ({ index, title, flickr_url, image, alt, location,
           </figcaption>
         </figure>
       </main>
+      <Footer/>
     </>
   )
 }
